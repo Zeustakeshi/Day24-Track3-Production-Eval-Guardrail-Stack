@@ -8,6 +8,12 @@ load_dotenv()
 # --- API Keys ---
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 HF_TOKEN = os.getenv("HF_TOKEN", "")  # Optional: for HuggingFace models
+COHERE_API_KEY = os.getenv("COHERE_API_KEY", "")  # Optional: only used if USE_COHERE_RERANK=1
+
+# Ollama Cloud / any OpenAI-compatible endpoint — src/llm.py tries this FIRST
+OLLAMA_API_KEY = os.getenv("OLLAMA_API_KEY", "")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "https://ollama.com/v1")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma4:31b-cloud")
 
 # --- Qdrant (same as Day 18) ---
 QDRANT_HOST = "localhost"

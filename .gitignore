@@ -8,3 +8,5 @@ venv/
 answers_50q.json
 reports/*.json
 !reports/.gitkeep
+
+/model_cache
